@@ -1,7 +1,8 @@
+import chromelogger as console
+
 class ChromeLoggerMiddleware:
-    def __init__(self, app, console):
+    def __init__(self, app):
         self.app = app
-        self.console = console
 
     async def __call__(self, scope):
         headers = dict(scope["headers"])
