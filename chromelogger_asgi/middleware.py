@@ -9,4 +9,4 @@ class ChromeLoggerMiddleware:
             header = console.get_header()
             if header is not None:
                 headers.update(header)
-        await self.app(scope, receive, send)
+        await self.app(receive, send)
